@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Primary Meta Tags -->
+  <title>ChatGPT Command Library - 100+ Powerful AI Slash Commands</title>
+  <meta name="title" content="ChatGPT Command Library - 100+ Powerful AI Slash Commands" />
+  <meta name="description" content="A beautiful, searchable library of 100+ powerful ChatGPT slash commands and prompt shortcuts organized by category. Copy, favorite, and learn instantly." />
+  <meta name="keywords" content="ChatGPT, slash commands, AI prompts, prompt engineering, AI shortcuts, command library" />
+  <meta name="author" content="ChatGPT Command Library" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chatgpt-command-library.example.com/" />
+  <meta property="og:title" content="ChatGPT Command Library - 100+ Powerful AI Slash Commands" />
+  <meta property="og:description" content="A beautiful, searchable library of 100+ powerful ChatGPT slash commands and prompt shortcuts organized by category." />
+  <meta property="og:image" content="assets/images/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://chatgpt-command-library.example.com/" />
+  <meta property="twitter:title" content="ChatGPT Command Library - 100+ Powerful AI Slash Commands" />
+  <meta property="twitter:description" content="A beautiful, searchable library of 100+ powerful ChatGPT slash commands and prompt shortcuts organized by category." />
+  <meta property="twitter:image" content="assets/images/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" referrerpolicy="no-referrer" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" referrerpolicy="no-referrer" />
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ChatGPT Command Library",
+    "description": "A beautiful, searchable library of 100+ powerful ChatGPT slash commands and prompt shortcuts organized by category.",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo" aria-label="ChatGPT Command Library home">
+        <span class="navbar__logo-icon"><i class="fa-solid fa-terminal"></i></span>
+        <span class="navbar__logo-text">ChatGPT Command Library</span>
+      </a>
+
+      <div class="navbar__search">
+        <i class="fa-solid fa-magnifying-glass navbar__search-icon" aria-hidden="true"></i>
+        <input
+          type="search"
+          id="searchInput"
+          class="navbar__search-input"
+          placeholder="Search commands...  (Ctrl + K)"
+          aria-label="Search commands"
+          autocomplete="off"
+        />
+        <kbd class="navbar__search-kbd" aria-hidden="true">Ctrl K</kbd>
+      </div>
+
+      <div class="navbar__actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light and dark theme" title="Toggle theme (Ctrl + D)">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#" class="btn btn--ghost navbar__github" aria-label="View on GitHub" title="GitHub (placeholder)">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+        <button id="mobileMenuToggle" class="icon-btn navbar__menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content">
+      <span class="hero__badge" data-aos="fade-down">
+        <i class="fa-solid fa-bolt"></i> 100+ Slash Commands
+      </span>
+      <h1 class="hero__title" data-aos="fade-up">
+        Your Pocket Reference for <span class="gradient-text">ChatGPT Slash Commands</span>
+      </h1>
+      <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="100">
+        A curated, searchable library of powerful prompt shortcuts. Search, filter, copy, and favorite
+        the commands that supercharge your AI workflows.
+      </p>
+
+      <div class="hero__stats" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <span class="stat-card__value" id="statTotal">0</span>
+          <span class="stat-card__label">Total Commands</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value" id="statCategories">0</span>
+          <span class="stat-card__label">Categories</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value" id="statFavorites">0</span>
+          <span class="stat-card__label">Favorites</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main" id="main">
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Categories and filters">
+      <div class="sidebar__header">
+        <h2 class="sidebar__title"><i class="fa-solid fa-layer-group"></i> Categories</h2>
+      </div>
+
+      <nav class="category-list" id="categoryList" aria-label="Filter by category">
+        <!-- Categories injected by JS -->
+      </nav>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__subtitle">Sort by</h3>
+        <div class="sort-options" id="sortOptions" role="group" aria-label="Sort commands">
+          <button class="sort-btn is-active" data-sort="alphabetical" aria-pressed="true">
+            <i class="fa-solid fa-arrow-down-a-z"></i> Alphabetical
+          </button>
+          <button class="sort-btn" data-sort="newest" aria-pressed="false">
+            <i class="fa-solid fa-clock"></i> Newest
+          </button>
+          <button class="sort-btn" data-sort="popular" aria-pressed="false">
+            <i class="fa-solid fa-fire"></i> Most Popular
+          </button>
+          <button class="sort-btn" data-sort="favorites" aria-pressed="false">
+            <i class="fa-solid fa-star"></i> Favorites
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar__section sidebar__shortcuts">
+        <h3 class="sidebar__subtitle">Keyboard Shortcuts</h3>
+        <ul class="shortcut-list">
+          <li><kbd>Ctrl</kbd> + <kbd>K</kbd> <span>Focus search</span></li>
+          <li><kbd>Esc</kbd> <span>Close expanded cards</span></li>
+          <li><kbd>Ctrl</kbd> + <kbd>D</kbd> <span>Toggle theme</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Right Content -->
+    <section class="content" aria-label="Command cards">
+      <div class="content__toolbar">
+        <div class="content__count" id="resultCount" aria-live="polite">
+          Showing <strong>0</strong> commands
+        </div>
+        <button class="btn btn--ghost btn--sm" id="clearFilters" title="Clear all filters">
+          <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+      </div>
+
+      <div class="card-grid" id="cardGrid" aria-live="polite">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <i class="fa-solid fa-magnifying-glass empty-state__icon"></i>
+        <h3 class="empty-state__title">No commands found</h3>
+        <p class="empty-state__text">Try a different search term or category.</p>
+      </div>
+
+      <div class="load-more-wrap" id="loadMoreWrap" hidden>
+        <button class="btn btn--primary" id="loadMoreBtn">
+          <i class="fa-solid fa-chevron-down"></i> Load more commands
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo"><i class="fa-solid fa-terminal"></i></span>
+        <span>ChatGPT Command Library</span>
+      </div>
+      <p class="footer__text">
+        A curated collection of 100+ powerful ChatGPT slash commands. Built with pure HTML, CSS, and
+        vanilla JavaScript &mdash; no frameworks, no build tools.
+      </p>
+      <div class="footer__links">
+        <a href="#hero">Back to top</a>
+        <a href="#">GitHub</a>
+        <a href="#">Privacy</a>
+      </div>
+      <p class="footer__copy">&copy; <span id="year"></span> ChatGPT Command Library. For educational use.</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <i class="fa-solid fa-check toast__icon"></i>
+    <span class="toast__text" id="toastText">Copied!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="commands.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>
